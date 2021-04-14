@@ -1,0 +1,46 @@
+.my-row .row > .col,
+.my-row .row > [class^="col-"] {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    /* background-color: rgba(39, 41, 43, 0.03); */
+    padding: 5px;
+}
+
+.solid-col {
+    border: 1px solid rgba(39, 41, 43, 0.1);
+}
+
+.vertical-align {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100%;
+}
+
+.plus-minus-button {
+	background-color:#525154;
+	border-radius:10px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Impact;
+	font-size:17px;
+	padding:19px 15px;
+	text-decoration:none;
+
+}
+.plus-minus-button:hover {
+	background-color:#0f1211;
+    color:#ffffff;
+}
+
+.plus-minus-button:active {
+	position:relative;
+	top:1px;
+}
+
+.product-amount {
+    /* display: flex;
+    align-items: center;
+    height: 100%; */
+}

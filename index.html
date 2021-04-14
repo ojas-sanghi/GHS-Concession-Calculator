@@ -1,27 +1,71 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset='utf-8'>
-    <title>GHS Concession Calculator</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/litera/bootstrap.min.css">
-    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="stylesheet.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Dogfalo/materialize@1.0/extras/noUiSlider/nouislider.min.css">
+    <link href="index.css" rel="stylesheet">
+    <link href="bootstrap.min.css" rel="stylesheet">
 
+    <script type="text/javascript" src="index.js"> </script>
+    <script type="text/javascript" src="bootstrap.bundle.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> -->
+
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Dogfalo/materialize@1.0/extras/noUiSlider/nouislider.min.css"> -->
+    <!-- <script src="https://cdn.jsdelivr.net/gh/Dogfalo/materialize@1.0/extras/noUiSlider/nouislider.min.js"></script> -->
     <!-- <link href="nouislider.css" rel="stylesheet">
     <script src="nouislider.js"></script> -->
-    
-    <script src="https://cdn.jsdelivr.net/gh/Dogfalo/materialize@1.0/extras/noUiSlider/nouislider.min.js"></script>
-    
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
     <!-- <script type="text/javascript" src="SpinBox.js"></script> -->
-    <script type="text/javascript" src="index.js"> </script>
+
+    <title>GHS Concession Calculator</title>
+
+<body style="background-color:#800000;">
+
+    <h1 class="text-center text-white">GHS Concession Calculator</h1>
+    <br>
+
+    <div class="my-row">
+        <div class="container">
+            <div class="row">
+                <div class="col-2"> </div>
+                <div class="col">
+                    <p class="text-center text-white">
+                        Small Drink <br> <b>Cost: $1</b>
+                    </p>
+                </div>
+                <div class="col"> 
+                    <a href="#" class="plus-minus-button text-white">-</a>
+                </div>
+                <div class="col">
+                    <span class="text-center text-white product-amount" contenteditable="true">10</span>
+                 </div>
+                <div class="col"> 
+                    <a href="#" class="plus-minus-button text-white">+</a>
+                </div>
+                <div class="col">
+                    <p class="vertical-align text-center text-white">
+                        Total: $0
+                    </p>
+                </div>
+                <div class="col-2"> </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+
 </head>
 
+
+</html>
+
+<!-- OLD MATERIALIZE CODE -->
+<!-- 
 <body class="red darken-4 white-text container" style="font-family: Georgia">
     <div>
         <h1>GHS Concession Calculator</h1>
@@ -43,16 +87,16 @@
             </div>
 
             <!-- <div class="col s4 ">  -->
-                <!-- <button class="btn waves-effect waves-light">-</button> -->
-                <!-- <input type="number" min="0" max="100" step="1" id="input-number"> -->
-            <!-- </div> -->
+<!-- <button class="btn waves-effect waves-light">-</button> -->
+<!-- <input type="number" min="0" max="100" step="1" id="input-number"> -->
+<!-- </div> --\>
             <div class="col s1"> 
                 <p id="output-number"> 0 </p>
             </div>
             <div class="col s5"> 
-                <!-- <p id="output-number"> 0 </p> -->
+                <!-- <p id="output-number"> 0 </p> --\>
                 <div id="html5"></div>
-                <!-- <button class="btn waves-effect waves-light">+</button> -->
+                <!-- <button class="btn waves-effect waves-light">+</button> --\>
             </div>
 
             <div class="col s3 "> 
@@ -78,7 +122,7 @@
 
         <!-- <input type="number" min="0" max="100" step="1" id="input-number"> -->
 
-        <!-- <div class="row">
+<!-- <div class="row">
             <div class="col s2 "> 
                 Small Drink <br> <b>Cost: $3</b>
             </div>
@@ -98,17 +142,15 @@
             </div>
         </div> -->
 
-        <!-- <div class="row">
+<!-- <div class="row">
             <div class="col s4"><span class="">asdas asdadasdasdada  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa  aaaaaaaaaaaa aaaaa</span></div>
             <div class="col s4"><span class="">JIIUHasdadasdasdadaa aaaaaaaaaaaa aaaaaaaa aaaaaaaaaaaaa aaaa aaaaaaaaa</span></div>
             <div class="col s4"><span class="">JIIUHasdadasdasdadaaaaaaaaa aaaaaaaaaaaa aaaaaaa aaaaaaaaaa aaaaaaaaa</span></div>
         </div> -->
-            <!-- <div class="col s6 offset-s6"><span class="">6-columns (offset-by-6)</span></div> -->
+<!-- <div class="col s6 offset-s6"><span class="">6-columns (offset-by-6)</span></div> --\>
 
         <h3> <u>Question 1</u> </h3>
         <h4>Which of the following are true about FBLA? (Choose all that apply)</h4>
 
     </div>
-</body>
-
-</html>
+</body> -->
