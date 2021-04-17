@@ -40,15 +40,15 @@ for (var i = 0; i < itemNames.length; i++) {
   template.innerHTML = `
   <div class="row align-items-center justify-content-center" id="row${i}">
     <div class="col col-sm-1">
-        <p class="text-center text-white name-cost item${i}">
+        <p class="text-justify text-white name-cost item${i}">
             ${itemName} <br> <b>Cost: $${itemCost}</b>
         </p>
     </div>
     <div class="col col-sm-auto">
-        <input type="number" class="amount-input item${i}" pattern="[0-9]*" size="5" min="0" value="0" />
+        <input type="number" class="form-control form-control-sm amount-input item${i}" pattern="[0-9]*" min="0" value="0" />
     </div>
     <div class="col col-sm-1">
-        <p class="text-center text-white total item${i}">
+        <p class="text-justify text-white total item${i}">
             Total: $0
         </p>
     </div>
@@ -74,7 +74,7 @@ function extractDollarAmountFromText(text) {
 
 function updateValue(e) {
   var numItems = e.target.value;
-  var itemClass = e.target.classList[1];
+  var itemClass = e.target.classList[3];
   
   // update row's value
   var rowItems = document.getElementsByClassName(itemClass);
@@ -87,9 +87,7 @@ function updateValue(e) {
   var totalSum = 0;
   for (var i = 0; i < itemNames.length; i++) {
     var itemTotal = document.getElementsByClassName(`item${i}`)[2];
-    console.log(itemTotal);
     var itemTotalCost = extractDollarAmountFromText(itemTotal.innerText);
-    console.log(itemTotalCost);
     totalSum += itemTotalCost;
   }
   finalTotal.innerHTML = `<b>Total: </b> $${totalSum}`
