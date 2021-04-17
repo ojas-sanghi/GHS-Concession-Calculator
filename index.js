@@ -45,7 +45,7 @@ for (var i = 0; i < itemNames.length; i++) {
         </p>
     </div>
     <div class="col col-sm-auto">
-        <input type="number" class="amount-input item${i}" pattern="[0-9]*" size="5" min="0" />
+        <input type="number" class="amount-input item${i}" pattern="[0-9]*" size="5" min="0" value="0" />
     </div>
     <div class="col col-sm-1">
         <p class="text-center text-white total item${i}">
@@ -64,7 +64,33 @@ for (var input of inputs) {
   input.addEventListener('input', updateValue);
 }
 
+function extractDollarAmountFromText(text) {
+  // text = "Small Drink\nCost: $1"
+  var dollarIndex = text.indexOf("$");
+  var costSubStr = text.substring(dollarIndex); // "$1"
+  var costInt = Number(costSubStr.substring(1)); // 1
+  return costInt;
+}
+
 function updateValue(e) {
-  console.log(e.target.value);
-  console.log(e.target.classList);
+  var numItems = e.target.value;
+  var itemClass = e.target.classList[1];
+  
+  // update row's value
+  var rowItems = document.getElementsByClassName(itemClass);
+  var rowCost = extractDollarAmountFromText(rowItems[0].innerText);
+  var rowTotal = rowItems[2];
+  rowTotal.innerText = `Total: $${rowCost * numItems}`
+
+  // update total's value at the bottom
+  var finalTotal = document.getElementById("final-total");
+  var totalSum = 0;
+  for (var i = 0; i < itemNames.length; i++) {
+    var itemTotal = document.getElementsByClassName(`item${i}`)[2];
+    console.log(itemTotal);
+    var itemTotalCost = extractDollarAmountFromText(itemTotal.innerText);
+    console.log(itemTotalCost);
+    totalSum += itemTotalCost;
+  }
+  finalTotal.innerHTML = `<b>Total: </b> $${totalSum}`
 }
